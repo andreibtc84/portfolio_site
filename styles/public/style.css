@@ -1,0 +1,34 @@
+html {
+  font-family: "Roboto", sans-serif;
+  background-color: whitesmoke;
+}
+
+.navbar {
+  background-color: #55555585;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.nav-list {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.nav-list .nav-item {
+  list-style: none;
+}
+.nav-list .nav-item a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.nav-list .nav-item a:hover {
+  text-decoration: 2px solid black;
+  color: tomato;
+}
+
+/*# sourceMappingURL=style.css.map */

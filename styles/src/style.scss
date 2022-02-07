@@ -1,0 +1,48 @@
+// Variables
+$font-stack: 'Roboto', sans-serif;
+$bgColor: whitesmoke;
+$secondaryColor: tomato;
+
+// General styles
+
+html {
+    font-family: $font-stack;
+    background-color: $bgColor;
+}
+
+.navbar {
+    background-color: #55555585;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    
+}
+.nav-list {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .nav-item {
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.5rem;
+            font-weight: bold;
+
+            // &:visited {
+            //     color: tomato;
+            // }
+            &:hover {
+                text-decoration: 2px solid black;
+                color: $secondaryColor; 
+                
+            }
+        } 
+    }
+    
+}
+

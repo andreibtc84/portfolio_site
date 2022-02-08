@@ -77,79 +77,40 @@ html {
 }
 
 .section{
-    margin-top: 50px;
-    width: 100%;
+    width: 100vw;
+    height: 80vh;
     padding: 50px;
-    margin-top:50px;
 }
-
 
 .hero-section {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     color: $green-sheen;
     font-size: larger;
-    .hero-container {
+    .hero-container{
         display: flex;
         flex-flow: column wrap;
         align-items: flex-start;
         justify-content: center;
-        margin: 10px;
-        max-width: 50%;
+        @media (max-width: 564px) and (max-width: 300px){
+            align-items: center;
+        }
         h1{
-            font-size: 3rem;
+            font-size: 5rem;
             font-weight: 700; 
-            @media (max-width: 400px) {
+            
+            @media (max-width: 564px) and (max-width: 300px) {
                 font-size: 2rem;
+                align-self: center;
+                justify-content: center; 
             }
         }
         h3{
             font-weight: 300;
             color: $bronze; 
-            @media (max-width: 400px) {
-                font-size: .8rem;
-            } 
         }
-        .btn-container{
-            width: 100%;
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
-            justify-content: flex-start;
-            margin-top: 25px;
-            gap: 10px;
-            
-            .btn {
-                // margin-right: 20px;
-                padding: 10px;
-                border: 2px solid $green-sheen;;
-                border-radius: 10px;
-                background-color: $charcoal;
-                color: $green-sheen;
-                font-size: 1.2rem;
-                @media (max-width: 400px) {
-                    font-size: .8rem;
-                } 
-                &:hover {
-                    border: 2px solid $corn;
-                    color: $corn;
-                }
-            }
-        }
-    }
-    .fig-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        max-width: 50%;
-        margin: 10px;
-        @media (max-width: 719px) {
-            display:none;
-        }
-       
-
     }
 }
 
@@ -158,7 +119,6 @@ html {
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    
     .about-container{
         display: flex;
         flex-flow: row wrap;

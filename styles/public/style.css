@@ -18,7 +18,7 @@ html {
   width: 100%;
   height: 100%;
   margin-top: 100px;
-  padding: 50px;
+  padding: 150px;
 }
 
 .section-title {
@@ -76,6 +76,7 @@ html {
   flex-flow: column wrap;
   align-items: flex-start;
   justify-content: center;
+  margin: auto;
 }
 @media (max-width: 564px) and (max-width: 300px) {
   .hero-section .hero-container {

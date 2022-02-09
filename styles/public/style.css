@@ -7,11 +7,29 @@
 html {
   font-family: "Roboto", sans-serif;
   background-color: #424b54ff;
+  scroll-behavior: smooth;
 }
 
 .section {
-  padding: 15px;
-  margin-top: 15px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+  padding: 50px;
+}
+
+.section-title {
+  font-size: 3rem;
+  color: #8bbeb2ff;
+}
+
+.section-subtitle {
+  color: #bc8034ff;
+  font-weight: 100;
+  margin-bottom: 100px;
 }
 
 .navbar {
@@ -19,11 +37,13 @@ html {
   flex-wrap: row wrap;
   align-items: center;
   justify-content: center;
-  position: sticky;
+  position: fixed;
   top: 0;
-  width: 100%;
+  z-index: 1;
+  width: 100vw;
   height: 15vh;
   overflow: hidden;
+  transition: background-color 1s ease-in-out;
 }
 
 .nav-list {
@@ -47,17 +67,7 @@ html {
   color: #f4e76eff;
 }
 
-.section {
-  width: 100vw;
-  height: 80vh;
-  padding: 50px;
-}
-
 .hero-section {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
   color: #8bbeb2ff;
   font-size: larger;
 }
@@ -99,6 +109,55 @@ html {
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
+  gap: 50px;
+}
+.about-section .about-container .about-description {
+  color: inherit;
+}
+
+.portfolio-section {
+  padding: auto;
+}
+.portfolio-section .portfolio-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio-section .portfolio-container a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+.portfolio-section .portfolio-container:visited {
+  color: inherit;
+}
+.portfolio-section .portfolio-container .flex-item {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  border: 2px solid #8bbeb2ff;
+  width: 300px;
+  height: 200px;
+  padding: 15px;
+  margin: 10px;
+  color: #8bbeb2ff;
+}
+.portfolio-section .portfolio-container .flex-item:hover {
+  color: #f4e76eff;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border: 2px solid #f4e76eff;
+  transition: 0.5s ease-in-out;
+}
+.portfolio-section .portfolio-container .flex-item .project-title,
+.portfolio-section .portfolio-container .flex-item .project-description,
+.portfolio-section .portfolio-container .flex-item #codecamp {
+  margin: 5px;
+}
+.portfolio-section .portfolio-container .flex-item .flex-item-list {
+  list-style: none;
 }
 
 /*# sourceMappingURL=style.css.map */

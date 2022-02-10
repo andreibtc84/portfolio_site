@@ -22,24 +22,28 @@ html {
     
 }
 
-.section{
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 100vh;
-    margin-top: 100px;
-    padding: 150px;
-}
+// .section{
+//     display: flex;
+//     flex-flow: column wrap;
+//     align-items: center;
+//     justify-content: center;
+//     width: 100%;
+//     min-height: 100vh;
+//     margin-top: 100px;
+//     padding: 150px;
+// }
 .section-title {
     font-size: 3rem;
     color: $green-sheen;
+    padding: 8rem .5rem auto .5rem;
+    
 }
 .section-subtitle{
     color:$bronze;
     font-weight: 100;
     margin-bottom: 100px;
+    padding: .5rem;
+    
 }
 
 // General styles end
@@ -89,6 +93,11 @@ html {
 // Hero Section start
 
 .hero-section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: $green-sheen;
     font-size: larger;
     .hero-container{
@@ -125,6 +134,8 @@ html {
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
+    padding: 8rem 3rem;
+    
     .about-container{
         display: flex;
         flex-flow: row wrap;
@@ -141,11 +152,18 @@ html {
 // Portfolio section start
 
 .portfolio-section {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8rem;
+    
     .portfolio-container {
         display: flex;
         flex-flow: row wrap;
         align-items: center;
         justify-content: center;
+        gap:1rem;
         a {
             text-decoration: none; 
             margin: 0;
@@ -159,14 +177,11 @@ html {
             flex-flow: column wrap;
             align-items: center;
             justify-content: space-evenly;
-            // box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
             border-radius: 10px;
             border: 2px solid $green-sheen;
-            width: 300px;
-            height: 200px;
+            width: 15rem;
+            height: 20rem;
             padding: 15px;
-            margin: 10px;
-            // background-color: whitesmoke;
             color: $green-sheen;
             &:hover {
                 color: $corn;
@@ -189,3 +204,29 @@ html {
 
 
 // Portfolio section end
+
+// Technologies section start
+
+.technologies-section {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8rem;
+    
+}
+
+// Technologies section end
+
+// Contact section start
+.contact-section {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8rem;
+    
+}
+
+// Contact section end
+

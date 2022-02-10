@@ -1,5 +1,7 @@
 console.log("Connected!");
 
+// Navigation
+
 const navbar = document.querySelector(".navbar");
 const navTransparency = () => {
   scrollY === 0

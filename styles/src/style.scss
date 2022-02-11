@@ -19,7 +19,9 @@ html {
     font-family: $font-stack;
     background-color: $charcoal;
     scroll-behavior: smooth;
-    
+}
+body {
+    overflow-x: hidden;
 }
 
 
@@ -44,7 +46,6 @@ html {
     font-weight: 100;
     margin-bottom: 100px;
     padding: .5rem;
-    
 }
 
 // General styles end
@@ -53,48 +54,113 @@ html {
 
 .navbar {
     display: flex;
-    flex-wrap: row wrap;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     position: fixed;
-    top: 0;
-    z-index: 1;
     width: 100vw;
-    height: 15vh;
-    overflow: hidden;
+    top:0;
+    height: 8vh;
     transition: background-color 1s ease-in-out; 
-}
-.nav-list {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
 
-    .nav-item {
-        list-style: none;
-        padding: 10px;
-        margin: 10px;
+    .burger {
+        display: none;
 
-        a {
-            text-decoration: none;
-            color: $green-sheen;
-            font-size: 1.5rem;
-            
-            &:hover {
-                text-decoration: 2px solid black;
-                color: $corn;    
-            }
-        } 
+        div {
+            width: 30px;
+            height: 3px;
+            background-color: $green-sheen;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+        @media (max-width: 768px){
+            display: block;
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            z-index: 15;
+        }
     }
+    .burgerToX{
+        .line1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        .line2 {
+            opacity: 0;
+        }
+        .line3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+    }
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+
+        @media (max-width: 768px){
+            position: absolute;
+            left: 0px;
+            height: 100vh;
+            top: 0;
+            width: 50vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            background-color: rgba(0, 0, 0, 0.934);
+            border-radius: 0 15px 15px 0;
+            transform: translateX(-100%);
+            transition: transform .5s ease-in-out;
+            z-index: 2;
+        }
+    }
+    .nav-active {
+        transform: translateX(0%);
+    }
+
     
 }
+    
+.nav-item {
+    list-style: none;
+    padding: 1rem;
+    a {
+        text-decoration: none;
+        color: $green-sheen;
+        font-size: 1.5rem;
+        
+        &:hover {
+            text-decoration: 2px solid black;
+            color: $corn;    
+        }
+    } 
+    @media (max-width: 768px){
+        opacity: 0;
+    }
+    @keyframes navItemFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+}
+
+
+
+
 
 // Navigation end
 
 // Hero Section start
 
 .hero-section {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -214,20 +280,36 @@ html {
     align-items: center;
     justify-content: center;
     padding-top: 8rem;
+
+    .technologies-container{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            border: 2px solid $green-sheen;
+            border-radius: 5px;
+            aspect-ratio: 1/1;
+        }
+    }
     
 }
 
 // Technologies section end
 
 // Contact section start
+
 .contact-section {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
     padding-top: 8rem;
-    
 }
 
 // Contact section end
-

@@ -174,7 +174,7 @@ body {
         display: flex;
         flex-flow: column wrap;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: flex-start;
         padding: 2rem;
         margin:auto;
         @media (max-width: 564px) and (max-width: 300px){
@@ -186,13 +186,18 @@ body {
             
             @media (max-width: 564px) and (max-width: 300px) {
                 font-size: 2rem;
-                align-self: center;
+                align-self: flex-start;
                 justify-content: center; 
             }
         }
         h3{
+            align-self: start;
             font-weight: 300;
             color: $bronze; 
+
+            @media (max-width: 564px) and (max-width: 300px) {
+                font-size: medium;
+            }
         }
     }
 }

@@ -27,6 +27,20 @@ body {
   padding: 0.5rem;
 }
 
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.slideInLeft {
+  animation: slideInLeft 1s;
+}
+
 .navbar {
   display: flex;
   flex-direction: row;
